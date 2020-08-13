@@ -1,0 +1,2 @@
+include ':app-module', ':app-common', ':application'
+rootProject.name = "Wandroid"
