@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'brick'
+apply from: 'https://gitee.com/numeron/brick/raw/master/brick.gradle'
 
 android {
     compileSdkVersion 29
@@ -17,12 +16,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments(['MODULE_NAME': project.name, 'PROJECT_NAME': project.rootProject.name])
-            }
-        }
-
     }
 
     buildTypes {
@@ -36,7 +29,6 @@ android {
 dependencies {
 
     kapt "androidx.room:room-compiler:2.2.5"
-    kapt "com.gitee.numeron.brick:compiler:$brick_version"
 
     implementation project(':app-module')
     implementation project(':app-common')
