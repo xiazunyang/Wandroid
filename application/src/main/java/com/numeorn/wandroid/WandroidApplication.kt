@@ -1,13 +1,7 @@
 package com.numeorn.wandroid
 
 import android.app.Application
-import com.numeorn.common.init
+import dagger.hilt.android.HiltAndroidApp
 
-class WandroidApplication : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        init(this)
-    }
-
-}
+@HiltAndroidApp
+class WandroidApplication : Application()

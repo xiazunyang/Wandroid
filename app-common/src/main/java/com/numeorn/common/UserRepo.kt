@@ -1,8 +1,8 @@
 package com.numeorn.common
 
-import com.numeron.brick.annotation.Inject
+import javax.inject.Inject
 
-class UserRepo {
+class UserRepo @Inject constructor() {
 
     @Inject
     lateinit var userApi: UserApi

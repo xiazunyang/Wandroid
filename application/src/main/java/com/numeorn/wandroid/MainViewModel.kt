@@ -3,19 +3,19 @@ package com.numeorn.wandroid
 import androidx.lifecycle.ViewModel
 import com.numeorn.common.UserRepo
 import com.numeorn.module.WxAuthorRepo
-import com.numeron.brick.annotation.Inject
-import com.numeron.brick.annotation.Provide
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-@Provide
-class MainViewModel : ViewModel() {
-
-    @Inject
-    private lateinit var userRepo: UserRepo
+@HiltViewModel
+class MainViewModel @Inject constructor() : ViewModel() {
 
     @Inject
-    private lateinit var articleRepo: ArticleRepo
+    lateinit var userRepo: UserRepo
 
     @Inject
-    private lateinit var wxAuthorRepo: WxAuthorRepo
+    lateinit var articleRepo: ArticleRepo
+
+    @Inject
+    lateinit var wxAuthorRepo: WxAuthorRepo
 
 }

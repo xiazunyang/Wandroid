@@ -1,13 +1,13 @@
 package com.numeorn.common
 
 import androidx.lifecycle.ViewModel
-import com.numeron.brick.annotation.Inject
-import com.numeron.brick.annotation.Provide
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-@Provide
-class UserViewModel: ViewModel() {
+@HiltViewModel
+class UserViewModel @Inject constructor() : ViewModel() {
 
     @Inject
-    private lateinit var userRepo: UserRepo
+    lateinit var userRepo: UserRepo
 
 }

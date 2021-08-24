@@ -1,13 +1,11 @@
 package com.numeorn.module
 
-import com.numeron.brick.annotation.Inject
+import javax.inject.Inject
 
-class WxAuthorRepo {
+class WxAuthorRepo @Inject constructor() {
 
-    @Inject
     lateinit var wxAuthorApi: WxAuthorApi
 
-    @Inject
     lateinit var wxAuthorDao: WxAuthorDao
 
 }

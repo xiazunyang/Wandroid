@@ -1,10 +1,9 @@
 package com.numeorn.wandroid
 
-import com.numeron.brick.annotation.Inject
+import javax.inject.Inject
 
-class ArticleRepo {
+class ArticleRepo  @Inject constructor(){
 
-    @Inject
     lateinit var articleDao: ArticleDao
 
 }
